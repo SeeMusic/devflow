@@ -24,12 +24,15 @@ Skill 文件随源码仓库分发，通过 [vercel-labs/skills](https://github.c
 
 ```bash
 # SSH
-npx skills add git@gitlab.kanjian.com:fe/devflow-cli.git
+npx skills add git@gitlab.kanjian.com:fe/devflow-cli.git -g -y --skills '*' -a claude-code
 
 # HTTPS
-npx skills add https://gitlab.kanjian.com/fe/devflow-cli.git
+npx skills add https://gitlab.kanjian.com/fe/devflow-cli.git -g -y --skills '*' -a claude-code
 ```
 
+> `-a` 指定目标 AI 客户端，多个客户端可重复使用：`-a claude-code -a codex`。
+> 完整 agent 列表见 [vercel-labs/skills 官方文档](https://github.com/vercel-labs/skills?tab=readme-ov-file#available-agents)。
+>
 > 鉴权沿用本机 git 配置，SSH / HTTPS 均可，按个人习惯选择。
 
 ### 3. 配置鉴权
