@@ -8,6 +8,13 @@ export function registerSkills(jira: Command): void {
     .command('add')
     .description('安装 devflow skill 到 AI 客户端')
     .option('-a, --agent <name>', '目标 AI 客户端，可重复指定（如 claude-code、codex）', (val, prev: string[]) => [...prev, val], [])
+    .addHelpText('after', `
+示例:
+  kdev jira skills add -a claude-code
+  kdev jira skills add -a codex
+  kdev jira skills add -a claude-code -a codex
+
+完整 agent 列表：https://github.com/vercel-labs/skills?tab=readme-ov-file#available-agents`)
     .action((opts: { agent: string[] }) => {
       if (opts.agent.length === 0) {
         process.stderr.write('请通过 -a 指定目标 AI 客户端，例如：kdev jira skills add -a claude-code\n');

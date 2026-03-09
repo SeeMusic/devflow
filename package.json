@@ -1,6 +1,6 @@
 {
   "name": "@kmfe/devflow",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DevFlow CLI - agent-first developer toolchain (JIRA, GitLab, etc.)",
   "type": "module",
   "bin": {
