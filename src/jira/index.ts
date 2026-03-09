@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import { registerAuth } from './commands/auth';
+import { registerSkills } from './commands/skills';
 import { registerWhoami } from './commands/whoami';
 import { registerTeamMembers, registerTeamAdd, registerTeamRemove } from './commands/team';
 import { registerProjects } from './commands/projects';
@@ -23,6 +24,7 @@ export function createJiraCommand(): Command {
   // 鉴权
   registerAuth(jira);
   registerWhoami(jira);
+  registerSkills(jira);
 
   // 上下文
   registerTeamMembers(jira);

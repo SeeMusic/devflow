@@ -13,7 +13,8 @@ pnpm publish      # 发布到 npm（自动触发 typecheck + build）
 
 本地调试：
 ```bash
-node dist/index.mjs jira whoami
+node dist/index.mjs -V          # 验证版本号
+node dist/index.mjs jira whoami # 验证鉴权
 ```
 
 ## 项目结构
