@@ -94,8 +94,7 @@ wrapApiError(e)         // API 异常自动映射 error code
 Skill 文件在源码仓库中，通过 `npx skills add` 安装：
 
 ```bash
-npx skills add git@gitlab.kanjian.com:fe/devflow-cli.git    # SSH
-npx skills add https://gitlab.kanjian.com/fe/devflow-cli.git # HTTPS
+npx skills add SeeMusic/devflow -g -y --skills '*' -a claude-code
 ```
 
 skill 改动需手动同步到 `~/.claude/skills/devflow-jira/SKILL.md`（本地测试用）。
