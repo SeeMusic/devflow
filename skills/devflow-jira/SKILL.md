@@ -51,7 +51,7 @@ kdev jira <命令> [参数]
 | `comment <key> <内容>` | — | 添加评论 |
 | `delete <key>` | — | 删除工单（永久移除，内部先检查权限） |
 | `worklog-get <key>` | — | 查看工时记录（预估/实际/剩余及明细），返回含 worklog id |
-| `worklog-add <key> <时长> [日期]` | — | 记录用时，时长格式：`1w` `1d` `2h` `30m`，组合须空格分隔如 `1d 2h 30m`，日期默认今天 |
+| `worklog-add <key> <时长> [日期]` | — | 记录用时，时长格式：`1w` `1d` `2h` `30m`，组合须空格分隔如 `1d 2h 30m`，不能连写如 ~~`2h30m`~~。 日期默认今天 |
 | `worklog-delete <key> <worklogId>` | — | 删除工时记录，worklogId 从 worklog-get 获取 |
 | `time-set <key> <预估> [剩余]` | — | 设置预估和剩余时间，时长格式同上 |
 
